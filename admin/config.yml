@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: theAgileTester/aitestinglab
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://aitestinglab.co.uk
+display_url: https://aitestinglab.co.uk
+
+locale: en
+
+collections:
+  - name: "articles"
+    label: "Articles"
+    folder: "_articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Evaluation Design", "Human Testing", "LLM Behavior", "Red Teaming", "Benchmarks & Gaps", "Rubrics & Verdicts", "AI QA Careers", "Case Studies"] }
+      - { label: "Read Time (min)", name: "readtime", widget: "number", default: 5 }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Article", name: "featured", widget: "boolean", default: false }
+
+  - name: "pages"
+    label: "Site Content"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "_data/homepage.yml"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subtext", name: "hero_subtext", widget: "text" }
+          - { label: "About Text", name: "about_text", widget: "markdown" }
+          - { label: "Pull Quote", name: "pull_quote", widget: "string" }
