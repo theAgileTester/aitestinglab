@@ -14,7 +14,7 @@ locale: en
 collections:
   - name: "articles"
     label: "Articles"
-    folder: "_articles"
+    folder: "articles"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -32,9 +32,11 @@ collections:
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "_data/homepage.yml"
+        file: "data/homepage.yml"
         fields:
           - { label: "Hero Headline", name: "hero_headline", widget: "string" }
           - { label: "Hero Subtext", name: "hero_subtext", widget: "text" }
           - { label: "About Text", name: "about_text", widget: "markdown" }
           - { label: "Pull Quote", name: "pull_quote", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Office Address", name: "office_address", widget: "text" }
