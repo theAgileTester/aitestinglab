@@ -244,7 +244,7 @@ footer{padding:64px 0 36px}
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/articles"">Articles</a>
+  <a href="/articles">Articles</a>
   <a href="/topics">Topics</a>
   <a href="/kit">Resources</a>
   <a href="/about">About</a>
@@ -257,8 +257,9 @@ footer{padding:64px 0 36px}
       <span class="kicker"><span class="dot"></span>For people who test AI</span>
       <h1>Where AI testing becomes a <span class="underline-anim">discipline.<svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M4 10 Q 75 2 150 8 T 296 6"/></svg></span></h1>
       <p class="lede">Practical guides, real evaluation frameworks, and a growing community for people who test AI systems for a living — not for the leaderboard.</p>
-      <form class="signup" id="heroSignup">
-        <input type="email" placeholder="you@company.com" required aria-label="Email address">
+      <form class="signup" id="heroSignup" name="hero-signup" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="hero-signup">
+        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
         <button class="btn btn-blue" type="submit">Join free <span class="arr">→</span></button>
         <span class="ok">✓ You're on the list — welcome aboard.</span>
       </form>
@@ -361,13 +362,13 @@ footer{padding:64px 0 36px}
     <div class="sec-top reveal"><div><div class="sec-label">Explore</div><h2>Browse by topic</h2></div></div>
     <div class="pills stagger">
       <a class="pill" href="/articles">Evaluation Design</a>
-      <a class="pill" href="#articles">Human Testing</a>
-      <a class="pill" href="#articles">LLM Behavior</a>
-      <a class="pill" href="#articles">Red Teaming</a>
-      <a class="pill" href="#articles">Benchmarks &amp; Gaps</a>
-      <a class="pill" href="#articles">Rubrics &amp; Verdicts</a>
-      <a class="pill" href="#articles">AI QA Careers</a>
-      <a class="pill" href="#articles">Case Studies</a>
+      <a class="pill" href="/articles">Human Testing</a>
+      <a class="pill" href="/articles">LLM Behavior</a>
+      <a class="pill" href="/articles">Red Teaming</a>
+      <a class="pill" href="/articles">Benchmarks &amp; Gaps</a>
+      <a class="pill" href="/articles">Rubrics &amp; Verdicts</a>
+      <a class="pill" href="/articles">AI QA Careers</a>
+      <a class="pill" href="/articles">Case Studies</a>
     </div>
   </div>
 </section>
@@ -427,8 +428,9 @@ footer{padding:64px 0 36px}
       <div class="avatars">
         <i style="background:#2547F4">AK</i><i style="background:#16C784">YL</i><i style="background:#F5A623">RM</i><i style="background:#0E1116">TS</i><i style="background:#F0564A">NB</i><i style="background:#6C84FF">EÇ</i><i style="background:#0E9B66">+</i>
       </div>
-      <form class="signup" id="commSignup" style="max-width:460px">
-        <input type="email" placeholder="you@company.com" required aria-label="Email address">
+      <form class="signup" id="commSignup" style="max-width:460px" name="community-signup" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="community-signup">
+        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
         <button class="btn btn-blue" type="submit">Get early access <span class="arr">→</span></button>
         <span class="ok">✓ You're in — we'll email you at launch.</span>
       </form>
@@ -440,8 +442,9 @@ footer{padding:64px 0 36px}
   <div class="wrap">
     <div class="newsletter reveal">
       <div><div class="sec-label">Newsletter</div><h2>One practical AI testing insight, weekly.</h2><p>No hype, no model-of-the-week noise. Just methods you can use on Monday.</p></div>
-      <form class="signup" id="newsSignup">
-        <input type="email" placeholder="you@company.com" required aria-label="Email address">
+      <form class="signup" id="newsSignup" name="newsletter-signup" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter-signup">
+        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
         <button class="btn btn-blue" type="submit">Subscribe <span class="arr">→</span></button>
         <span class="ok">✓ Subscribed — first issue lands soon.</span>
       </form>
@@ -458,7 +461,7 @@ footer{padding:64px 0 36px}
       </div>
       <div>
         <h4>Explore</h4>
-        <a href="#articles">Articles</a>
+        <a href="/articles">Articles</a>
         <a href="/topics">Topics</a>
         <a href="/kit">Starter Kit</a>
         <a href="/about">About</a>
@@ -541,11 +544,19 @@ if(!reduced && matchMedia('(pointer:fine)').matches){
 document.querySelectorAll('form.signup').forEach(f=>{
   f.addEventListener('submit',e=>{
     e.preventDefault();
-    const input=f.querySelector('input');
+    const input=f.querySelector('input[type="email"]');
     if(!input.checkValidity()){input.reportValidity();return}
-    f.classList.add('done');
-    input.value='';input.placeholder='✓ Added';
-    const btn=f.querySelector('button');btn.disabled=true;btn.style.opacity=.65;
+    const btn=f.querySelector('button');
+    btn.disabled=true;btn.style.opacity=.65;
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(()=>{
+        f.classList.add('done');
+        input.value='';input.placeholder='✓ Added';
+      })
+      .catch(()=>{
+        btn.disabled=false;btn.style.opacity=1;
+        alert('Something went wrong — please try again.');
+      });
   });
 });
 
