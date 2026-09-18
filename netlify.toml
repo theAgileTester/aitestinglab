@@ -6,3 +6,32 @@
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
+
+# Clean URLs for on-page sections (single-page site) - serve index.html
+# directly so /articles, /topics, /kit, /about, /community don't 404
+# on a direct visit or refresh. JS in index.html scrolls to the right
+# section based on the path.
+[[redirects]]
+  from = "/articles"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/topics"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/kit"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/community"
+  to = "/index.html"
+  status = 200
