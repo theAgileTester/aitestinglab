@@ -231,24 +231,24 @@ footer{padding:64px 0 36px}
   <div class="wrap nav">
     <a class="logo" href="/"><img src="logo.png" alt="AI Testing Lab" class="logo-img"></a>
     <ul class="nav-links">
-      <li><a href="#articles">Articles</a></li>
-      <li><a href="#topics">Topics</a></li>
-      <li><a href="#kit">Resources</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="/articles">Articles</a></li>
+      <li><a href="/topics">Topics</a></li>
+      <li><a href="/kit">Resources</a></li>
+      <li><a href="/about">About</a></li>
     </ul>
     <div class="nav-right">
-      <a class="btn btn-blue" href="#community">Join the community <span class="arr">→</span></a>
+      <a class="btn btn-blue" href="/community">Join the community <span class="arr">→</span></a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#articles">Articles</a>
-  <a href="#topics">Topics</a>
-  <a href="#kit">Resources</a>
-  <a href="#about">About</a>
-  <a href="#community" style="color:var(--blue)">Join the community →</a>
+  <a href="/articles"">Articles</a>
+  <a href="/topics">Topics</a>
+  <a href="/kit">Resources</a>
+  <a href="/about">About</a>
+  <a href="/community" style="color:var(--blue)">Join the community →</a>
 </div>
 
 <section class="hero" id="top">
@@ -360,7 +360,7 @@ footer{padding:64px 0 36px}
   <div class="wrap">
     <div class="sec-top reveal"><div><div class="sec-label">Explore</div><h2>Browse by topic</h2></div></div>
     <div class="pills stagger">
-      <a class="pill" href="#articles">Evaluation Design</a>
+      <a class="pill" href="/articles">Evaluation Design</a>
       <a class="pill" href="#articles">Human Testing</a>
       <a class="pill" href="#articles">LLM Behavior</a>
       <a class="pill" href="#articles">Red Teaming</a>
@@ -379,7 +379,7 @@ footer{padding:64px 0 36px}
         <div>
           <h2>The AI Evaluation Starter Kit</h2>
           <p>Free rubric templates, a 40-case test library, and a verdict framework — everything you need to run your first structured human evaluation this week.</p>
-          <a class="btn btn-white" href="#community">Get free access <span class="arr">→</span></a>
+          <a class="btn btn-white" href="/community">Get free access <span class="arr">→</span></a>
         </div>
         <div class="kit">
           <div class="kit-label">// inside the kit</div>
@@ -459,9 +459,9 @@ footer{padding:64px 0 36px}
       <div>
         <h4>Explore</h4>
         <a href="#articles">Articles</a>
-        <a href="#topics">Topics</a>
-        <a href="#kit">Starter Kit</a>
-        <a href="#about">About</a>
+        <a href="/topics">Topics</a>
+        <a href="/kit">Starter Kit</a>
+        <a href="/about">About</a>
         <a href="https://medium.com/@banututuncu" target="_blank" rel="noopener">Medium ↗</a>
       </div>
       <div>
@@ -487,6 +487,29 @@ header.classList.toggle('scrolled',window.scrollY>10);
 const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
 burger.addEventListener('click',()=>{const open=menu.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':''});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');document.body.style.overflow=''}));
+
+// Clean-URL section routing: /articles, /topics, /kit, /about, /community
+// and "/" all live on this one page. Clicking a nav link updates the URL
+// without a full reload and scrolls smoothly; visiting one of those URLs
+// directly (or refreshing) lands on the right section immediately.
+const sectionPaths={'/':'top','/articles':'articles','/topics':'topics','/kit':'kit','/about':'about','/community':'community'};
+function scrollToPath(path,smooth){
+  const id=sectionPaths[path];
+  const el=id&&document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:smooth?'smooth':'auto',block:'start'});
+}
+document.querySelectorAll('a[href]').forEach(a=>{
+  const href=a.getAttribute('href');
+  if(Object.prototype.hasOwnProperty.call(sectionPaths,href)){
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      if(location.pathname!==href)history.pushState(null,'',href);
+      scrollToPath(href,true);
+    });
+  }
+});
+window.addEventListener('popstate',()=>scrollToPath(location.pathname||'/',true));
+if(location.pathname!=='/')scrollToPath(location.pathname,false);  
 
 const ticker=document.getElementById('ticker');
 ticker.innerHTML+=ticker.innerHTML;
