@@ -4,7 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Testing Lab — Where AI testing becomes a discipline</title>
-<meta name="description" content="Practical guides, real evaluation frameworks, and a growing community for people who test AI for a living. By Banu Tutuncu, London.">
+<meta name="description" content="Guides, evolving frameworks, and a growing community for people learning to test AI. By Banu Tutuncu, London.">
+<link rel="canonical" href="https://aitestinglab.co.uk/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Banu Tutuncu">
+<meta name="keywords" content="AI testing, AI QA, LLM evaluation, prompt testing, AI test automation, evaluation frameworks, testing AI systems">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Testing Lab">
+<meta property="og:title" content="AI Testing Lab — Where AI testing becomes a discipline">
+<meta property="og:description" content="Guides, evolving frameworks, and a growing community for people learning to test AI.">
+<meta property="og:url" content="https://aitestinglab.co.uk/">
+<meta property="og:image" content="https://aitestinglab.co.uk/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Testing Lab — Where AI testing becomes a discipline">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Testing Lab — Where AI testing becomes a discipline">
+<meta name="twitter:description" content="Guides, evolving frameworks, and a growing community for people learning to test AI.">
+<meta name="twitter:image" content="https://aitestinglab.co.uk/og-image.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
@@ -226,6 +247,24 @@ footer{padding:64px 0 36px}
 @media (max-width:1020px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-visual{height:430px;max-width:520px;margin:0 auto;width:100%}.articles{grid-template-columns:1fr}.magnet-grid{grid-template-columns:1fr;padding:44px 28px;gap:36px}.about{grid-template-columns:1fr;gap:44px}.newsletter{grid-template-columns:1fr;gap:24px;text-align:left}.foot-grid{grid-template-columns:1fr;gap:36px}.nav-links,.nav-right .btn{display:none}.burger{display:block}section{padding:72px 0}.hero{padding:130px 0 64px}}
 @media (max-width:560px){.float-card{width:230px;padding:15px 16px}.float-card.c2{width:240px}.hero-visual{height:400px}.signup{flex-direction:column}.signup .btn{justify-content:center}.card-row{flex-direction:column;align-items:flex-start}.card-row .thumb{width:100%;aspect-ratio:16/9}.community{padding:52px 22px}}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AI Testing Lab",
+  "url": "https://aitestinglab.co.uk/",
+  "logo": "https://aitestinglab.co.uk/logo.png",
+  "image": "https://aitestinglab.co.uk/og-image.png",
+  "description": "Guides, evolving frameworks, and a growing community for people learning to test AI.",
+  "founder": {
+    "@type": "Person",
+    "name": "Banu Tutuncu",
+    "sameAs": ["https://medium.com/@banututuncu"]
+  },
+  "areaServed": "GB",
+  "sameAs": ["https://medium.com/@banututuncu"]
+}
+</script>
 </head>
 <body>
 
@@ -258,7 +297,7 @@ footer{padding:64px 0 36px}
     <div>
       <span class="kicker"><span class="dot"></span>For people who test AI</span>
       <h1>Where AI testing becomes a <span class="underline-anim">discipline.<svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M4 10 Q 75 2 150 8 T 296 6"/></svg></span></h1>
-      <p class="lede">Practical guides, real evaluation frameworks, and a growing community for people who test AI systems for a living — not for the leaderboard.</p>
+      <p class="lede">Guides, evolving frameworks, and a growing community for people learning to test AI properly — not just chasing the leaderboard.</p>
       <form class="signup" id="heroSignup" name="hero-signup" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="hero-signup">
         <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
@@ -305,7 +344,7 @@ footer{padding:64px 0 36px}
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="ticker">
-    <span>Evaluation design</span><span>Human testing</span><span>LLM behavior analysis</span><span>Red teaming</span><span>Rubrics &amp; verdicts</span><span>Benchmark gaps</span><span>AI QA careers</span><span>Edge cases</span>
+    <span>Human testing</span><span>Bias testing</span><span>Robustness testing</span><span>Explainability</span><span>Data quality</span><span>Adversarial testing</span><span>Edge cases</span><span>Accuracy testing</span>
   </div>
 </div>
 
@@ -316,7 +355,7 @@ footer{padding:64px 0 36px}
       <a class="view-all" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">View all articles <span class="arr">→</span></a>
     </div>
     <div class="articles stagger">
-      <a class="card featured" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
+      <a class="card featured" href="https://medium.com/@banututuncu/part-7-the-production-gap-0e6d55bdad36" target="_blank" rel="noopener">
         <div class="thumb"><div class="thumb-art">
           <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
             <rect width="640" height="360" fill="#EEF1FF"/>
@@ -330,30 +369,30 @@ footer{padding:64px 0 36px}
           </svg>
         </div></div>
         <div class="card-body">
-          <span class="tag t-fail">Evaluation Design</span>
-          <h3>Your AI passed the benchmark. Then it met a human.</h3>
-          <p>Leaderboard scores tell you how a model performs on someone else's questions — not how it behaves with your users, your data, and your edge cases. Here's how to build evaluation that closes the gap.</p>
-          <div class="byline"><span class="av">BT</span><span>By <b>Banu Tutuncu</b> · 8 min read</span></div>
+          <span class="tag t-fail">Production AI</span>
+          <h3>Part 7 — The Production Gap</h3>
+          <p>What changes when your AI system meets the real world — the failure modes that never show up in staging, and why observability (not more testing) is what actually catches them.</p>
+          <div class="byline"><span class="av">BT</span><span>By <b>Banu Tutuncu</b> · 7 min read</span></div>
         </div>
       </a>
       <div class="art-side">
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-          <div class="thumb"><div class="thumb-art">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#E5F9F1"/><g transform="rotate(-5 160 120)"><rect x="70" y="70" width="180" height="100" rx="14" fill="#fff" stroke="#16C784" stroke-width="2.5"/><rect x="92" y="94" width="80" height="10" rx="5" fill="#0E1116" opacity=".8"/><rect x="92" y="116" width="120" height="7" rx="3.5" fill="#9AA3B0"/><circle cx="222" cy="100" r="16" fill="#16C784"/><path d="M215 100 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
-          </div></div>
-          <div class="card-body"><span class="tag t-pass">Human Testing</span><h3>What human evaluators catch that your metrics never will</h3><div class="meta">6 min read</div></div>
-        </a>
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-          <div class="thumb"><div class="thumb-art">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#FEF4E2"/><g stroke="#F5A623" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M60 180 L120 120 L170 150 L260 70"/></g><circle cx="120" cy="120" r="7" fill="#F5A623"/><circle cx="170" cy="150" r="7" fill="#F5A623"/><circle cx="260" cy="70" r="9" fill="#F0564A"/><rect x="226" y="34" width="68" height="22" rx="7" fill="#FDEAE8" stroke="#F0564A" stroke-width="2"/><text x="260" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#F0564A">DRIFT</text></svg>
-          </div></div>
-          <div class="card-body"><span class="tag t-flag">LLM Behavior</span><h3>How to write rubrics your whole team actually agrees on</h3><div class="meta">9 min read</div></div>
-        </a>
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
+        <a class="card card-row" href="https://medium.com/@banututuncu/part-6-the-invisible-failure-0b6e36514987" target="_blank" rel="noopener">
           <div class="thumb"><div class="thumb-art">
             <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#EEF1FF"/><g transform="rotate(3 160 120)"><rect x="56" y="60" width="120" height="120" rx="14" fill="#fff" stroke="#E8EAF0" stroke-width="2"/><rect x="148" y="76" width="120" height="120" rx="14" fill="#fff" stroke="#2547F4" stroke-width="2.5"/><rect x="168" y="100" width="60" height="9" rx="4" fill="#0E1116" opacity=".8"/><rect x="168" y="120" width="80" height="7" rx="3.5" fill="#9AA3B0"/><rect x="168" y="138" width="70" height="7" rx="3.5" fill="#C7CDD6"/><rect x="168" y="160" width="44" height="16" rx="8" fill="#2547F4"/></g></svg>
           </div></div>
-          <div class="card-body"><span class="tag t-blue">Red Teaming</span><h3>A starter playbook for adversarial testing of LLM apps</h3><div class="meta">11 min read</div></div>
+          <div class="card-body"><span class="tag t-blue">Bias &amp; Fairness</span><h3>Part 6 — The Invisible Failure</h3><div class="meta">10 min read</div></div>
+        </a>
+        <a class="card card-row" href="https://medium.com/@banututuncu/part-5-when-the-model-knows-its-being-watched-74daa36ee1dc" target="_blank" rel="noopener">
+          <div class="thumb"><div class="thumb-art">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#FEF4E2"/><g stroke="#F5A623" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M60 180 L120 120 L170 150 L260 70"/></g><circle cx="120" cy="120" r="7" fill="#F5A623"/><circle cx="170" cy="150" r="7" fill="#F5A623"/><circle cx="260" cy="70" r="9" fill="#F0564A"/><rect x="226" y="34" width="68" height="22" rx="7" fill="#FDEAE8" stroke="#F0564A" stroke-width="2"/><text x="260" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#F0564A">DRIFT</text></svg>
+          </div></div>
+          <div class="card-body"><span class="tag t-flag">Evaluation Design</span><h3>Part 5 — When the Model Knows It's Being Watched</h3><div class="meta">9 min read</div></div>
+        </a>
+        <a class="card card-row" href="https://medium.com/@banututuncu/part-4-who-watches-the-watcher-3953cbf98238" target="_blank" rel="noopener">
+          <div class="thumb"><div class="thumb-art">
+            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#E5F9F1"/><g transform="rotate(-5 160 120)"><rect x="70" y="70" width="180" height="100" rx="14" fill="#fff" stroke="#16C784" stroke-width="2.5"/><rect x="92" y="94" width="80" height="10" rx="5" fill="#0E1116" opacity=".8"/><rect x="92" y="116" width="120" height="7" rx="3.5" fill="#9AA3B0"/><circle cx="222" cy="100" r="16" fill="#16C784"/><path d="M215 100 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+          </div></div>
+          <div class="card-body"><span class="tag t-pass">Human-in-the-Loop</span><h3>Part 4 — Who Watches the Watcher?</h3><div class="meta">9 min read</div></div>
         </a>
       </div>
     </div>
@@ -364,14 +403,12 @@ footer{padding:64px 0 36px}
   <div class="wrap">
     <div class="sec-top reveal"><div><div class="sec-label">Explore</div><h2>Browse by topic</h2></div></div>
     <div class="pills stagger">
+      <a class="pill" href="/articles">Production AI</a>
+      <a class="pill" href="/articles">Bias &amp; Fairness</a>
       <a class="pill" href="/articles">Evaluation Design</a>
-      <a class="pill" href="/articles">Human Testing</a>
-      <a class="pill" href="/articles">LLM Behavior</a>
-      <a class="pill" href="/articles">Red Teaming</a>
-      <a class="pill" href="/articles">Benchmarks &amp; Gaps</a>
-      <a class="pill" href="/articles">Rubrics &amp; Verdicts</a>
-      <a class="pill" href="/articles">AI QA Careers</a>
-      <a class="pill" href="/articles">Case Studies</a>
+      <a class="pill" href="/articles">Human-in-the-Loop</a>
+      <a class="pill" href="/articles">Guardrails</a>
+      <a class="pill" href="/articles">LLM-as-Judge</a>
     </div>
   </div>
 </section>
@@ -402,21 +439,20 @@ footer{padding:64px 0 36px}
     <div class="founder-card reveal">
       <div class="founder-av">BT</div>
       <h3>Banu Tutuncu</h3>
-      <div class="founder-role">Founder &amp; Editor · AI Evaluation Consultant</div>
+      <div class="founder-role">Founder · Learning AI Testing, Out Loud</div>
       <div class="f-meta">
         <div><span>Base</span><span>London, UK</span></div>
-        <div><span>Focus</span><span>Human testing &amp; eval design</span></div>
+        <div><span>Focus</span><span>AI testing</span></div>
         <div><span>Writes at</span><span>medium.com/@banututuncu</span></div>
         <div><span>Email</span><span>banu@theagiletester.co.uk</span></div>
-        <div><span>Status</span><span class="open">Open to collaborations</span></div>
       </div>
     </div>
     <div class="about-copy reveal">
       <div class="sec-label">About</div>
-      <h2>Built by someone who tests AI for a living.</h2>
-      <p>I'm an independent AI evaluation consultant. I help teams understand how their models behave in real-world use through structured human testing — and I started AI Testing Lab to share what that work actually looks like.</p>
-      <div class="pull">"A model that's never been evaluated by humans hasn't been evaluated. It's been benchmarked."</div>
-      <p>Everything here comes from real engagements: the rubrics that worked, the failure modes that surprised everyone, and the methods that turn "it feels off" into something you can fix.</p>
+      <h2>Learning to test AI — out loud, in public.</h2>
+      <p>I'm sharing my own path into AI evaluation — the questions I'm asking, the frameworks I'm building, the small things I'm learning to catch. I started AI Testing Lab so we could learn and grow together.</p>
+      <div class="pull">"Testing AI takes a photographer's patience — waiting for the detail everyone else scrolls past."</div>
+      <p>Expect real test cases from tools I actually use, the small details that break "good enough" evaluations, and practical checklists you can borrow for your own testing.</p>
       <a class="btn btn-ghost" style="margin-top:14px" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">Read my essays on Medium <span class="arr">→</span></a>
     </div>
   </div>
@@ -428,9 +464,6 @@ footer{padding:64px 0 36px}
       <span class="soon">COMING SOON</span>
       <h2>A community for people who test AI is on the way.</h2>
       <p>Peer reviews of your eval setups, shared test libraries, live sessions, and honest conversations about what actually breaks. Join the early list — founding members get in first, free.</p>
-      <div class="avatars">
-        <i style="background:#2547F4">AK</i><i style="background:#16C784">YL</i><i style="background:#F5A623">RM</i><i style="background:#0E1116">TS</i><i style="background:#F0564A">NB</i><i style="background:#6C84FF">EÇ</i><i style="background:#0E9B66">+</i>
-      </div>
       <form class="signup" id="commSignup" style="max-width:460px" name="community-signup" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="community-signup">
         <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
@@ -462,7 +495,7 @@ footer{padding:64px 0 36px}
     <div class="foot-grid">
       <div>
         <a class="logo" href="/" style="margin-bottom:16px;display:inline-flex"><img src="logo.png" alt="AI Testing Lab" class="logo-img"></a>
-        <p style="max-width:300px">Practical guides, evaluation frameworks, and a community for people who test AI systems for a living.</p>
+        <p style="max-width:300px">Guides, evolving frameworks, and a growing community for people learning to test AI.</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -481,7 +514,7 @@ footer{padding:64px 0 36px}
     </div>
     <div class="foot-bottom">
       <span>© 2026 AI Testing Lab · Banu Tutuncu</span>
-      <span class="verified">EVALUATED BY HUMANS ✓</span>
+      <span>Written by a human — no AI ghostwriting here.</span>
     </div>
   </div>
 </footer>
