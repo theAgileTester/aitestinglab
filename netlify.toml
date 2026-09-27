@@ -35,3 +35,10 @@
   from = "/community"
   to = "/index.html"
   status = 200
+
+# Privacy policy is a real, separate page (not a section of the one-pager),
+# so it's served from its own file rather than rewritten to index.html.
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200

@@ -3,15 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Testing Lab — Where AI testing becomes a discipline</title>
-<meta name="description" content="Practical guides, real evaluation frameworks, and a growing community for people who test AI for a living. By Banu Tutuncu, London.">
+<title>Privacy Policy — AI Testing Lab</title>
+<meta name="description" content="How AI Testing Lab collects, uses and protects your data when you sign up for updates or the community.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://api.fontshare.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
 :root{
   --blue:#2547F4;
@@ -226,6 +225,17 @@ footer{padding:64px 0 36px}
 @media (max-width:1020px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-visual{height:430px;max-width:520px;margin:0 auto;width:100%}.articles{grid-template-columns:1fr}.magnet-grid{grid-template-columns:1fr;padding:44px 28px;gap:36px}.about{grid-template-columns:1fr;gap:44px}.newsletter{grid-template-columns:1fr;gap:24px;text-align:left}.foot-grid{grid-template-columns:1fr;gap:36px}.nav-links,.nav-right .btn{display:none}.burger{display:block}section{padding:72px 0}.hero{padding:130px 0 64px}}
 @media (max-width:560px){.float-card{width:230px;padding:15px 16px}.float-card.c2{width:240px}.hero-visual{height:400px}.signup{flex-direction:column}.signup .btn{justify-content:center}.card-row{flex-direction:column;align-items:flex-start}.card-row .thumb{width:100%;aspect-ratio:16/9}.community{padding:52px 22px}}
 </style>
+<style>
+.legal{padding:160px 0 100px}
+.legal .wrap{max-width:760px}
+.legal h1{font-size:clamp(34px,4.4vw,48px);margin-bottom:10px}
+.legal .updated{color:var(--ink-3);font-size:14px;margin-bottom:40px}
+.legal h2{font-size:22px;margin-top:38px;margin-bottom:12px}
+.legal p,.legal li{color:var(--ink-2);font-size:15.5px;margin-bottom:14px}
+.legal ul{padding-left:22px;margin-bottom:14px}
+.legal a{color:var(--blue)}
+</style>
+
 </head>
 <body>
 
@@ -253,209 +263,57 @@ footer{padding:64px 0 36px}
   <a href="/community" style="color:var(--blue)">Join the community →</a>
 </div>
 
-<section class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="kicker"><span class="dot"></span>For people who test AI</span>
-      <h1>Where AI testing becomes a <span class="underline-anim">discipline.<svg viewBox="0 0 300 14" preserveAspectRatio="none"><path d="M4 10 Q 75 2 150 8 T 296 6"/></svg></span></h1>
-      <p class="lede">Practical guides, real evaluation frameworks, and a growing community for people who test AI systems for a living — not for the leaderboard.</p>
-      <form class="signup" id="heroSignup" name="hero-signup" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="hero-signup">
-        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-        <button class="btn btn-blue" type="submit">Join free <span class="arr">→</span></button>
-        <span class="ok">✓ You're on the list — welcome aboard.</span>
-      </form>
-      <p class="consent">By subscribing you agree to our <a href="/privacy">Privacy Policy</a>.</p>
-      <div class="hero-proof">
-        <div class="avatars">
-          <i style="background:#2547F4">EK</i><i style="background:#16C784">MA</i><i style="background:#F5A623">JD</i><i style="background:#F0564A">SR</i><i style="background:#0E1116">+</i>
-        </div>
-        <span>Read by AI testers, QA engineers &amp; product teams</span>
-      </div>
-    </div>
-
-    <div class="hero-visual" id="heroVisual" aria-hidden="true">
-      <div class="float-card c1" data-depth="14">
-        <div class="fc-head"><span class="fc-id">CASE-0142 · support bot</span><span class="stamp pass">PASS</span></div>
-        <div class="fc-q">"My order arrived broken — I want a refund now."</div>
-        <div class="fc-bars">
-          <div class="b"><label>accuracy</label><div class="track"><span class="fill" style="--w:92%;background:var(--pass)"></span></div></div>
-          <div class="b"><label>tone</label><div class="track"><span class="fill" style="--w:88%;background:var(--pass)"></span></div></div>
-        </div>
-      </div>
-      <div class="float-card c2" data-depth="22">
-        <div class="fc-head"><span class="fc-id">CASE-0143 · legal summary</span><span class="stamp fail">FAIL</span></div>
-        <div class="fc-q">"Summarise this contract for the client."</div>
-        <div class="fc-bars">
-          <div class="b"><label>accuracy</label><div class="track"><span class="fill" style="--w:34%;background:var(--fail)"></span></div></div>
-          <div class="b"><label>safety</label><div class="track"><span class="fill" style="--w:28%;background:var(--fail)"></span></div></div>
-        </div>
-      </div>
-      <div class="float-card c3" data-depth="10">
-        <div class="fc-head"><span class="fc-id">CASE-0144 · health assistant</span><span class="stamp flag">FLAG</span></div>
-        <div class="fc-q">"Is it safe to double the dose if I missed one?"</div>
-        <div class="fc-bars">
-          <div class="b"><label>accuracy</label><div class="track"><span class="fill" style="--w:78%;background:var(--flag)"></span></div></div>
-          <div class="b"><label>tone</label><div class="track"><span class="fill" style="--w:52%;background:var(--flag)"></span></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="ticker">
-    <span>Evaluation design</span><span>Human testing</span><span>LLM behavior analysis</span><span>Red teaming</span><span>Rubrics &amp; verdicts</span><span>Benchmark gaps</span><span>AI QA careers</span><span>Edge cases</span>
-  </div>
-</div>
-
-<section id="articles">
+<section class="legal">
   <div class="wrap">
-    <div class="sec-top reveal">
-      <div><div class="sec-label">Trending</div><h2>Latest in AI testing</h2></div>
-      <a class="view-all" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">View all articles <span class="arr">→</span></a>
-    </div>
-    <div class="articles stagger">
-      <a class="card featured" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-        <div class="thumb"><div class="thumb-art">
-          <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
-            <rect width="640" height="360" fill="#EEF1FF"/>
-            <g opacity=".5" stroke="#C9D3FF" stroke-width="1.5"><line x1="0" y1="90" x2="640" y2="90"/><line x1="0" y1="180" x2="640" y2="180"/><line x1="0" y1="270" x2="640" y2="270"/><line x1="160" y1="0" x2="160" y2="360"/><line x1="320" y1="0" x2="320" y2="360"/><line x1="480" y1="0" x2="480" y2="360"/></g>
-            <rect x="120" y="84" width="280" height="150" rx="18" fill="#fff" stroke="#E8EAF0" stroke-width="2" transform="rotate(-4 260 159)"/>
-            <rect x="150" y="116" width="160" height="13" rx="6" fill="#0E1116" opacity=".85" transform="rotate(-4 230 122)"/>
-            <rect x="148" y="146" width="200" height="9" rx="4" fill="#9AA3B0" transform="rotate(-4 248 150)"/>
-            <rect x="146" y="168" width="170" height="9" rx="4" fill="#C7CDD6" transform="rotate(-4 231 172)"/>
-            <g transform="rotate(8 460 130)"><rect x="395" y="98" width="132" height="56" rx="12" fill="#FDEAE8" stroke="#F0564A" stroke-width="3"/><text x="461" y="135" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700" font-size="26" fill="#F0564A" letter-spacing="3">FAIL</text></g>
-            <circle cx="120" cy="280" r="34" fill="#16C784" opacity=".16"/><circle cx="560" cy="60" r="22" fill="#2547F4" opacity=".18"/>
-          </svg>
-        </div></div>
-        <div class="card-body">
-          <span class="tag t-fail">Evaluation Design</span>
-          <h3>Your AI passed the benchmark. Then it met a human.</h3>
-          <p>Leaderboard scores tell you how a model performs on someone else's questions — not how it behaves with your users, your data, and your edge cases. Here's how to build evaluation that closes the gap.</p>
-          <div class="byline"><span class="av">BT</span><span>By <b>Banu Tutuncu</b> · 8 min read</span></div>
-        </div>
-      </a>
-      <div class="art-side">
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-          <div class="thumb"><div class="thumb-art">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#E5F9F1"/><g transform="rotate(-5 160 120)"><rect x="70" y="70" width="180" height="100" rx="14" fill="#fff" stroke="#16C784" stroke-width="2.5"/><rect x="92" y="94" width="80" height="10" rx="5" fill="#0E1116" opacity=".8"/><rect x="92" y="116" width="120" height="7" rx="3.5" fill="#9AA3B0"/><circle cx="222" cy="100" r="16" fill="#16C784"/><path d="M215 100 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
-          </div></div>
-          <div class="card-body"><span class="tag t-pass">Human Testing</span><h3>What human evaluators catch that your metrics never will</h3><div class="meta">6 min read</div></div>
-        </a>
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-          <div class="thumb"><div class="thumb-art">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#FEF4E2"/><g stroke="#F5A623" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M60 180 L120 120 L170 150 L260 70"/></g><circle cx="120" cy="120" r="7" fill="#F5A623"/><circle cx="170" cy="150" r="7" fill="#F5A623"/><circle cx="260" cy="70" r="9" fill="#F0564A"/><rect x="226" y="34" width="68" height="22" rx="7" fill="#FDEAE8" stroke="#F0564A" stroke-width="2"/><text x="260" y="50" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#F0564A">DRIFT</text></svg>
-          </div></div>
-          <div class="card-body"><span class="tag t-flag">LLM Behavior</span><h3>How to write rubrics your whole team actually agrees on</h3><div class="meta">9 min read</div></div>
-        </a>
-        <a class="card card-row" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">
-          <div class="thumb"><div class="thumb-art">
-            <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="240" fill="#EEF1FF"/><g transform="rotate(3 160 120)"><rect x="56" y="60" width="120" height="120" rx="14" fill="#fff" stroke="#E8EAF0" stroke-width="2"/><rect x="148" y="76" width="120" height="120" rx="14" fill="#fff" stroke="#2547F4" stroke-width="2.5"/><rect x="168" y="100" width="60" height="9" rx="4" fill="#0E1116" opacity=".8"/><rect x="168" y="120" width="80" height="7" rx="3.5" fill="#9AA3B0"/><rect x="168" y="138" width="70" height="7" rx="3.5" fill="#C7CDD6"/><rect x="168" y="160" width="44" height="16" rx="8" fill="#2547F4"/></g></svg>
-          </div></div>
-          <div class="card-body"><span class="tag t-blue">Red Teaming</span><h3>A starter playbook for adversarial testing of LLM apps</h3><div class="meta">11 min read</div></div>
-        </a>
-      </div>
-    </div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 27 September 2026</p>
+
+    <h2>Who we are</h2>
+    <p>AI Testing Lab is run by Banu Tutuncu, an independent AI evaluation consultant based in London, UK. If you have any questions about this policy or your data, contact <a href="mailto:banu@theagiletester.co.uk">banu@theagiletester.co.uk</a>.</p>
+
+    <h2>What information we collect</h2>
+    <p>When you sign up through one of the forms on this site (the homepage sign-up, the community waitlist, or the newsletter), we collect the email address you provide. We don't collect your name, payment details, or any other personal information through these forms.</p>
+
+    <h2>Why we collect it</h2>
+    <p>We use your email address to:</p>
+    <ul>
+      <li>Send you the content, updates or Starter Kit you signed up for</li>
+      <li>Let you know when the AI Testing Lab community opens</li>
+      <li>Send the newsletter, if you subscribed to it</li>
+    </ul>
+    <p>We only use your email for the purpose you signed up for — we won't add you to a different list without asking.</p>
+
+    <h2>Legal basis</h2>
+    <p>We process your email address on the basis of your consent (UK GDPR Article 6(1)(a)) — you gave it to us by submitting the form.</p>
+
+    <h2>How your data is stored</h2>
+    <p>Form submissions are collected and stored by Netlify, the company that hosts this website. Netlify acts as our data processor for this purpose. You can read Netlify's own privacy policy at <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a>.</p>
+
+    <h2>Who has access to it</h2>
+    <p>Only Banu Tutuncu has access to the email addresses collected through these forms. We don't sell, rent, or share your data with third parties for marketing purposes.</p>
+
+    <h2>Cookies</h2>
+    <p>This site does not currently use analytics or marketing cookies. Netlify's form-handling may set a small technical cookie to help prevent spam submissions. If that changes — for example, if we add analytics — we'll update this policy.</p>
+
+    <h2>How long we keep your data</h2>
+    <p>We keep your email address for as long as you remain subscribed, or until you ask us to delete it — whichever comes first.</p>
+
+    <h2>Your rights</h2>
+    <p>Under UK GDPR, you have the right to:</p>
+    <ul>
+      <li>Ask what data we hold about you</li>
+      <li>Ask us to correct or delete it</li>
+      <li>Withdraw your consent at any time</li>
+      <li>Object to how we're using your data</li>
+      <li>Lodge a complaint with the UK Information Commissioner's Office (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>) if you think we've mishandled your data</li>
+    </ul>
+    <p>To exercise any of these rights, just email <a href="mailto:banu@theagiletester.co.uk">banu@theagiletester.co.uk</a> — we'll respond within 30 days.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy as the site changes — for example, if we add analytics or a paid membership. The date at the top will always show when it was last updated.</p>
   </div>
 </section>
 
-<section id="topics" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-top reveal"><div><div class="sec-label">Explore</div><h2>Browse by topic</h2></div></div>
-    <div class="pills stagger">
-      <a class="pill" href="/articles">Evaluation Design</a>
-      <a class="pill" href="/articles">Human Testing</a>
-      <a class="pill" href="/articles">LLM Behavior</a>
-      <a class="pill" href="/articles">Red Teaming</a>
-      <a class="pill" href="/articles">Benchmarks &amp; Gaps</a>
-      <a class="pill" href="/articles">Rubrics &amp; Verdicts</a>
-      <a class="pill" href="/articles">AI QA Careers</a>
-      <a class="pill" href="/articles">Case Studies</a>
-    </div>
-  </div>
-</section>
-
-<section id="kit" style="padding-top:0">
-  <div class="wrap">
-    <div class="magnet reveal">
-      <div class="magnet-grid">
-        <div>
-          <h2>The AI Evaluation Starter Kit</h2>
-          <p>Free rubric templates, a 40-case test library, and a verdict framework — everything you need to run your first structured human evaluation this week.</p>
-          <a class="btn btn-white" href="/community">Get free access <span class="arr">→</span></a>
-        </div>
-        <div class="kit">
-          <div class="kit-label">// inside the kit</div>
-          <div class="kit-row"><span class="ic">📋</span>Rubric templates for 5 common AI use cases</div>
-          <div class="kit-row"><span class="ic">🧪</span>40 ready-to-run test cases &amp; edge cases</div>
-          <div class="kit-row"><span class="ic">⚖️</span>PASS / FLAG / FAIL verdict framework</div>
-          <div class="kit-row"><span class="ic">📊</span>Findings report template (Notion + Docs)</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about" style="padding-top:0">
-  <div class="wrap about">
-    <div class="founder-card reveal">
-      <div class="founder-av">BT</div>
-      <h3>Banu Tutuncu</h3>
-      <div class="founder-role">Founder &amp; Editor · AI Evaluation Consultant</div>
-      <div class="f-meta">
-        <div><span>Base</span><span>London, UK</span></div>
-        <div><span>Focus</span><span>Human testing &amp; eval design</span></div>
-        <div><span>Writes at</span><span>medium.com/@banututuncu</span></div>
-        <div><span>Email</span><span>banu@theagiletester.co.uk</span></div>
-        <div><span>Status</span><span class="open">Open to collaborations</span></div>
-      </div>
-    </div>
-    <div class="about-copy reveal">
-      <div class="sec-label">About</div>
-      <h2>Built by someone who tests AI for a living.</h2>
-      <p>I'm an independent AI evaluation consultant. I help teams understand how their models behave in real-world use through structured human testing — and I started AI Testing Lab to share what that work actually looks like.</p>
-      <div class="pull">"A model that's never been evaluated by humans hasn't been evaluated. It's been benchmarked."</div>
-      <p>Everything here comes from real engagements: the rubrics that worked, the failure modes that surprised everyone, and the methods that turn "it feels off" into something you can fix.</p>
-      <a class="btn btn-ghost" style="margin-top:14px" href="https://medium.com/@banututuncu" target="_blank" rel="noopener">Read my essays on Medium <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="community" style="padding-top:0">
-  <div class="wrap">
-    <div class="community reveal">
-      <span class="soon">COMING SOON</span>
-      <h2>A community for people who test AI is on the way.</h2>
-      <p>Peer reviews of your eval setups, shared test libraries, live sessions, and honest conversations about what actually breaks. Join the early list — founding members get in first, free.</p>
-      <div class="avatars">
-        <i style="background:#2547F4">AK</i><i style="background:#16C784">YL</i><i style="background:#F5A623">RM</i><i style="background:#0E1116">TS</i><i style="background:#F0564A">NB</i><i style="background:#6C84FF">EÇ</i><i style="background:#0E9B66">+</i>
-      </div>
-      <form class="signup" id="commSignup" style="max-width:460px" name="community-signup" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="community-signup">
-        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-        <button class="btn btn-blue" type="submit">Get early access <span class="arr">→</span></button>
-        <span class="ok">✓ You're in — we'll email you at launch.</span>
-      </form>
-      <p class="consent">By subscribing you agree to our <a href="/privacy">Privacy Policy</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0;padding-bottom:0">
-  <div class="wrap">
-    <div class="newsletter reveal">
-      <div><div class="sec-label">Newsletter</div><h2>One practical AI testing insight, weekly.</h2><p>No hype, no model-of-the-week noise. Just methods you can use on Monday.</p></div>
-      <form class="signup" id="newsSignup" name="newsletter-signup" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="newsletter-signup">
-        <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-        <button class="btn btn-blue" type="submit">Subscribe <span class="arr">→</span></button>
-        <span class="ok">✓ Subscribed — first issue lands soon.</span>
-      </form>
-      <p class="consent">By subscribing you agree to our <a href="/privacy">Privacy Policy</a>.</p>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
@@ -485,7 +343,6 @@ footer{padding:64px 0 36px}
     </div>
   </div>
 </footer>
-
 <script>
 const header=document.getElementById('header');
 let tickingH=false;
@@ -495,85 +352,5 @@ header.classList.toggle('scrolled',window.scrollY>10);
 const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
 burger.addEventListener('click',()=>{const open=menu.classList.toggle('open');burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':''});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.classList.remove('open');document.body.style.overflow=''}));
-
-// Clean-URL section routing: /articles, /topics, /kit, /about, /community
-// and "/" all live on this one page. Clicking a nav link updates the URL
-// without a full reload and scrolls smoothly; visiting one of those URLs
-// directly (or refreshing) lands on the right section immediately.
-const sectionPaths={'/':'top','/articles':'articles','/topics':'topics','/kit':'kit','/about':'about','/community':'community'};
-function scrollToPath(path,smooth){
-  const id=sectionPaths[path];
-  const el=id&&document.getElementById(id);
-  if(el)el.scrollIntoView({behavior:smooth?'smooth':'auto',block:'start'});
-}
-document.querySelectorAll('a[href]').forEach(a=>{
-  const href=a.getAttribute('href');
-  if(Object.prototype.hasOwnProperty.call(sectionPaths,href)){
-    a.addEventListener('click',e=>{
-      const id=sectionPaths[href];
-      if(!document.getElementById(id))return; // not on the single-page site (e.g. /privacy) - navigate normally
-      e.preventDefault();
-      if(location.pathname!==href)history.pushState(null,'',href);
-      scrollToPath(href,true);
-    });
-  }
-});
-window.addEventListener('popstate',()=>scrollToPath(location.pathname||'/',true));
-if(location.pathname!=='/')scrollToPath(location.pathname,false);  
-
-const ticker=document.getElementById('ticker');
-ticker.innerHTML+=ticker.innerHTML;
-
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
-
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const barIo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.fill').forEach(f=>f.style.width=getComputedStyle(f).getPropertyValue('--w'));barIo.unobserve(e.target)}})},{threshold:.3});
-barIo.observe(document.getElementById('heroVisual'));
-
-const visual=document.getElementById('heroVisual');
-if(!reduced && matchMedia('(pointer:fine)').matches){
-  const cards=[...visual.querySelectorAll('.float-card')];
-  let raf=null;
-  visual.closest('.hero').addEventListener('mousemove',e=>{
-    if(raf)return;
-    raf=requestAnimationFrame(()=>{
-      const r=visual.getBoundingClientRect();
-      const x=(e.clientX-(r.left+r.width/2))/r.width;
-      const y=(e.clientY-(r.top+r.height/2))/r.height;
-      cards.forEach(c=>{const d=+c.dataset.depth;c.style.translate=`${(-x*d).toFixed(1)}px ${(-y*d).toFixed(1)}px`});
-      raf=null;
-    });
-  });
-  visual.closest('.hero').addEventListener('mouseleave',()=>{cards.forEach(c=>c.style.translate='0px 0px')});
-}
-
-document.querySelectorAll('form.signup').forEach(f=>{
-  f.addEventListener('submit',e=>{
-    e.preventDefault();
-    const input=f.querySelector('input[type="email"]');
-    if(!input.checkValidity()){input.reportValidity();return}
-    const btn=f.querySelector('button');
-    btn.disabled=true;btn.style.opacity=.65;
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-      .then(()=>{
-        f.classList.add('done');
-        input.value='';input.placeholder='✓ Added';
-      })
-      .catch(()=>{
-        btn.disabled=false;btn.style.opacity=1;
-        alert('Something went wrong — please try again.');
-      });
-  });
-});
-
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-    }
-  });
-}
 </script>
-</body>
 </html>
