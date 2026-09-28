@@ -205,6 +205,8 @@ section{padding:96px 0}
 .founder-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:0 24px 64px rgba(14,17,22,.07);transform:rotate(-1.5deg);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
 .founder-card:hover{transform:rotate(0);box-shadow:0 32px 72px rgba(14,17,22,.1)}
 .founder-av{width:88px;height:88px;border-radius:26px;margin-bottom:22px;background:linear-gradient(135deg,var(--blue),#6C84FF);display:grid;place-items:center;color:#fff;font-family:'Clash Display';font-size:32px;font-weight:600}
+.founder-av img,.byline .av img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.founder-av,.byline .av{overflow:hidden}
 .founder-card h3{font-size:25px;font-weight:600;margin-bottom:4px}
 .founder-role{font-size:14px;color:var(--ink-2);margin-bottom:22px}
 .f-meta{border-top:1px dashed var(--line);padding-top:18px;display:grid;gap:9px}
@@ -372,7 +374,7 @@ footer{padding:64px 0 36px}
           <span class="tag t-fail">Production AI</span>
           <h3>Part 7 — The Production Gap</h3>
           <p>What changes when your AI system meets the real world — the failure modes that never show up in staging, and why observability (not more testing) is what actually catches them.</p>
-          <div class="byline"><span class="av">BT</span><span>By <b>Banu Tutuncu</b> · 7 min read</span></div>
+          <div class="byline"><span class="av"><img src="banu-tutuncu.webp" alt="Banu Tutuncu" width="30" height="30"></span><span>By <b>Banu Tutuncu</b> · 7 min read</span></div>
         </div>
       </a>
       <div class="art-side">
@@ -437,7 +439,7 @@ footer{padding:64px 0 36px}
 <section id="about" style="padding-top:0">
   <div class="wrap about">
     <div class="founder-card reveal">
-      <div class="founder-av">BT</div>
+      <div class="founder-av"><img src="banu-tutuncu.webp" alt="Banu Tutuncu, founder of AI Testing Lab" width="88" height="88"></div>
       <h3>Banu Tutuncu</h3>
       <div class="founder-role">Founder · Learning AI Testing, Out Loud</div>
       <div class="f-meta">
